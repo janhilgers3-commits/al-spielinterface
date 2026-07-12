@@ -38,6 +38,11 @@ try {
   const gameData = JSON.parse(fs.readFileSync(path.join(root, 'game-data.json'), 'utf8'));
   if (gameData.groups.V.answer !== '0764') errors.push('Der Zwischencode von Segment V muss 0764 bleiben.');
   if (gameData.groups.E.answer !== '6407') errors.push('Der finale Code von Segment E muss 64-07 bzw. intern 6407 lauten.');
+  const eText = gameData.groups.E.entries.map(entry => entry.text).join('\n');
+  if (eText.includes('das nicht zurückführt')) errors.push('E enthält noch die veraltete Aussage „das nicht zurückführt“.');
+  for (const statement of ['Die Null steht an dritter Stelle.', 'Die Sechs eröffnet die Reihe.', 'Er schließt die Reihe.', 'das wahre das, das zurückführt.']) {
+    if (!eText.includes(statement)) errors.push(`E-Aussage fehlt: ${statement}`);
+  }
 } catch (error) {
   errors.push(`game-data.json ist ungültig: ${error.message}`);
 }
