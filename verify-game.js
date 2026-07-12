@@ -72,7 +72,13 @@ if (exists('game-server.js')) {
   for (const route of ['/api/admin/start', '/api/recovery']) {
     if (!server.includes(route)) errors.push(`Serverroute fehlt: ${route}`);
   }
+  if (!server.includes('/api/lobby/join')) errors.push('Die Lobby-Anmeldung fehlt auf dem Server.');
+  if (!server.includes('MIN_GROUP_SIZE=2')) errors.push('Die Mindestbesetzung von zwei Mitgliedern je Gruppe fehlt.');
+  if (!server.includes('state.groupsLocked=true')) errors.push('Die automatische verbindliche Gruppensperre fehlt.');
 }
+
+if (exists('public/index.html') && !fs.readFileSync(path.join(root, 'public/index.html'), 'utf8').includes('id="lobbyView"')) errors.push('Die Teilnehmer-Lobby fehlt.');
+if (exists('public/leitung.html') && !fs.readFileSync(path.join(root, 'public/leitung.html'), 'utf8').includes('id="attendeeList"')) errors.push('Die Anwesenheitsliste der Spielleitung fehlt.');
 
 if (errors.length) {
   console.error('\nIntegritätsprüfung fehlgeschlagen:\n');

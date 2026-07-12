@@ -3,10 +3,17 @@ L&B PRESSEARCHIV 2014 - START
 1. start_game.cmd doppelt anklicken.
 2. Das schwarze Fenster geöffnet lassen. Automatisch öffnet sich die lokale Seite "Spielleitung".
 3. Den dort bzw. im schwarzen Fenster angezeigten Link "Für Teilnehmende" an alle Gruppen geben.
-4. Die Teilnehmenden dürfen ihre Seiten bereits öffnen; die Spieluhr steht dabei auf BEREIT.
-5. Erst zum offiziellen Beginn auf "SPIELTAG JETZT STARTEN" klicken. Dann laufen die fünf Stunden verbindlich.
-6. Alle Geräte müssen sich im selben lokalen Netzwerk/WLAN befinden.
-7. Falls Windows beim ersten Start fragt, den Zugriff im privaten Netzwerk zulassen.
+4. Jede Person trägt auf ihrem Gerät einen eindeutigen Username ein und erscheint anschließend in der Anwesenheitsliste der Spielleitung.
+5. Kontrollieren, dass alle erwarteten Personen grün als ANWESEND markiert sind. Das Pressearchiv bleibt in dieser Zeit gesperrt.
+6. Erst zum offiziellen Beginn auf "SPIELTAG JETZT STARTEN" klicken. Dann werden alle Lobbyseiten freigegeben und die fünf Stunden laufen verbindlich.
+7. Alle Geräte müssen sich im selben lokalen Netzwerk/WLAN befinden.
+8. Falls Windows beim ersten Start fragt, den Zugriff im privaten Netzwerk zulassen.
+
+Gruppenphase:
+- Der Startknopf wird erst ab zehn gleichzeitig anwesenden Personen aktiv.
+- Nach dem Einführungsrätsel wählen alle A, B, C, D oder V.
+- Die Auswahl darf geändert werden, solange die Verteilung läuft.
+- Erst wenn jede Gruppe mindestens zwei anwesende Personen hat und niemand mehr ohne Gruppe ist, wird die Zuordnung automatisch verbindlich gesperrt und A.0 bis V.0 werden freigegeben.
 
 Vor einem neuen Durchlauf:
 1. Spielserver schließen.

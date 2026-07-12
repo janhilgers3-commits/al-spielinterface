@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>L&B Spielleitung</title>
-  <link rel="stylesheet" href="app.css?v=2160">
+  <link rel="stylesheet" href="app.css?v=2170">
 </head>
 <body>
   <header>
@@ -21,11 +21,17 @@
       <p id="controlMessage" class="message hidden"></p>
     </section>
     <section class="puzzle-box">
+      <span class="section-label">ANWESENHEIT</span>
+      <div class="attendance-head"><div><strong id="onlineCount">0</strong><span>aktuell anwesend</span></div><small id="registeredCount">0 angemeldet</small></div>
+      <div id="attendeeList" class="attendance-list"><p>Noch niemand in der Lobby.</p></div>
+      <div id="groupSummary" class="group-summary"></div>
+    </section>
+    <section class="puzzle-box">
       <span class="section-label">TEILNEHMERLINK</span>
       <p>Geben Sie den Teilnehmenden ausschließlich die normale Serveradresse ohne <code>/leitung.html</code>.</p>
       <a id="participantLink" class="button-link" href="/" target="_blank" rel="noopener">TEILNEHMERANSICHT ÖFFNEN</a>
     </section>
   </main>
-  <script src="leitung.js?v=2160"></script>
+  <script src="leitung.js?v=2170"></script>
 </body>
 </html>
