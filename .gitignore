@@ -1,0 +1,16 @@
+# Lokaler, veränderlicher Spielstand
+game-state.json
+game-state.json.*
+
+# Die Windows-Laufzeit ist nur für die Offline-Ausgabe nötig und gehört nicht ins Repository
+runtime/
+
+# Lokale Ausgaben
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
+

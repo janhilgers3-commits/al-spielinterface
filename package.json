@@ -1,0 +1,16 @@
+{
+  "name": "lb-spielinterface",
+  "version": "2.14.0",
+  "private": true,
+  "description": "Lokales Spielinterface für Tag 2",
+  "scripts": {
+    "start": "node game-server.js",
+    "check:syntax": "node --check game-server.js && node --check public/app.js",
+    "check:files": "node verify-game.js",
+    "test": "npm run check:syntax && npm run check:files"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
+

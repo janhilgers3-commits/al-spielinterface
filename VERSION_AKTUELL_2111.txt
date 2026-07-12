@@ -1,0 +1,14 @@
+L&B SPIELFASSUNG – AKTUELLER STAND
+
+Stand: 12.07.2026, 21:11 Uhr
+
+Enthalten:
+- kontextabhängige Kopfzeile statt dauerhaftem Erbe-Titel
+- semantische Schlüsselwortaufgabe und letzte Spur
+- drei zeitgesteuerte Lösungshinweise je Gruppe
+- gemeinsame Fünf-Stunden-Uhr
+- Sicherheitsnetz für A–D, V und E
+- sichtbare Hierarchy-Force-Überschreibungen
+- aktuelle Originalakten A, B, C, D, V und E
+
+Start ausschließlich über start_game.cmd in diesem Ordner.

@@ -1,0 +1,24 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>L&amp;B Pressearchiv - Bestand 2014</title><link rel="stylesheet" href="app.css?v=2140"></head><body>
+<main>
+  <header><div><h1 id="mainTitle">L&amp;B PRESSEARCHIV // BESTAND 2014</h1><p id="mainSubtitle">Rekonstruiertes Pressearchiv</p></div><span id="statusBadge">ARCHIV</span></header>
+  <div id="message" class="message hidden"></div>
+
+  <section id="introView">
+    <div class="tabs"><button id="showImages" class="active">Artikelansicht</button><button id="showTranscript">Transkript</button></div>
+    <div id="articleImages" class="article-images"></div>
+    <article id="articleTranscript" class="paper hidden"></article>
+    <div class="puzzle-box"><div id="introPattern" class="letter-pattern"></div><form id="introForm"><label>Lösungswort oder Lösungssatz<input id="introAnswer" autocomplete="off"></label><button type="submit">Prüfen</button></form></div>
+  </section>
+
+  <section id="groupView" class="hidden"><h2>Bildet Gruppen</h2><p>Teilen Sie sich in fünf Arbeitsgruppen auf. Jede Auswahl ist verbindlich und kann danach nicht geändert werden.</p><div id="groupCards" class="group-grid"></div><div id="groupConfirm" class="confirm hidden"><strong id="confirmText"></strong><p>Nach der Bestätigung bleibt dieses Gerät dauerhaft diesem Segment zugeordnet.</p><button id="confirmGroup">Verbindlich auswählen</button><button id="cancelGroup" class="secondary">Abbrechen</button></div></section>
+
+  <section id="audioView" class="hidden"><h2 id="audioTitle"></h2><p>Hören Sie die Aufzeichnung vollständig an. Erst danach wird die Schlüsselabfrage freigegeben.</p><audio id="groupAudio" controls preload="metadata"></audio><div class="key-task"><span id="groupKeyTaskLabel">AUFGABE</span><p id="groupKeyTaskText"></p></div><div id="keywordPattern" class="letter-pattern"></div><form id="keyForm" class="hidden"><label>Gesuchtes Lösungswort<input id="keyword" autocomplete="off"></label><button type="submit">Archiv öffnen</button></form><details id="keywordHint" class="subtle-hint hidden"><summary>Letzte Spur</summary><p id="keywordHintText"></p></details></section>
+
+  <section id="archiveView" class="hidden"><div class="archive-head"><div><h2 id="archiveTitle"></h2><p>Originalmaterial und zugeordnete Aufzeichnungen</p></div><div class="head-actions"><a id="originalArchive" class="archive-link" target="_blank">Originalakte öffnen</a><span id="groupBadge"></span></div></div><div id="vStatus" class="v-status hidden"></div><div class="archive-layout"><nav id="archiveNav"></nav><article id="archiveText" class="paper"></article></div><div class="answer-box"><h3 id="answerHeading">Finales Gruppenergebnis</h3><p id="answerHint">Geben Sie ausschließlich die ermittelte Zahl ein.</p><form id="answerForm"><input id="finalAnswer" inputmode="numeric" autocomplete="off"><button type="submit">Ergebnis übermitteln</button></form><div id="lockInfo"></div></div></section>
+
+  <section id="solvedView" class="hidden"><div class="success"><h2>ERGEBNIS BESTÄTIGT</h2><p id="solvedText"></p><div id="waitingState"></div></div></section>
+
+  <section id="eView" class="hidden"><div id="eAudioStage"><h2>WEITERES ARCHIVSEGMENT ERKANNT</h2><p>Die Transformation ist gültig, die Reihenfolge jedoch noch nicht abschließend verifiziert.</p><audio id="eAudio" controls preload="metadata" src="media/E0.mp3"></audio><form id="eKeyForm" class="hidden"><label>Zugriffsschlüssel aus E.0<input id="eKeyword" autocomplete="off"></label><button type="submit">Segment E öffnen</button></form></div><div id="eArchiveStage" class="hidden"><div class="archive-head"><div><h2>ARCHIVSEGMENT E</h2><p>Prüfung der finalen Reihenfolge</p></div><div class="head-actions"><a id="eOriginalArchive" class="archive-link" target="_blank">Originalakte öffnen</a><span>SEGMENT E</span></div></div><div class="archive-layout"><nav id="eNav"></nav><article id="eText" class="paper"></article></div><div class="answer-box"><h3>Finaler Code</h3><p>Geben Sie die vollständig geprüfte vierstellige Reihenfolge ein.</p><form id="eAnswerForm"><input id="eAnswer" inputmode="numeric" maxlength="4" autocomplete="off"><button type="submit">Finalen Code übermitteln</button></form><div id="eLockInfo"></div></div></div></section>
+
+  <section id="finalView" class="hidden"><div class="final"><h2>LETZTE NACHRICHT</h2><audio id="finalAudio" controls preload="metadata" src="media/Abschlussbrief.mp3"></audio><details><summary>Transkript des Abschlussbriefs</summary><div id="finalTranscript" class="flowtext"></div></details></div></section>
+</main><script src="app.js?v=2140"></script></body></html>

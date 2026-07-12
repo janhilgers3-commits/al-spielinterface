@@ -1,0 +1,27 @@
+L&B PRESSEARCHIV 2014 - START
+
+1. start_game.cmd doppelt anklicken.
+2. Das schwarze Fenster geöffnet lassen.
+3. Den dort angezeigten Link "Für Teilnehmende" an alle Gruppen geben.
+4. Alle Geräte müssen sich im selben lokalen Netzwerk/WLAN befinden.
+5. Falls Windows beim ersten Start fragt, den Zugriff im privaten Netzwerk zulassen.
+
+Vor einem neuen Durchlauf:
+1. Spielserver schließen.
+2. reset_game.cmd ausführen.
+3. start_game.cmd erneut starten.
+
+Zugänge:
+Einführungsrätsel: bildet gruppen
+Gruppe A: personen -> Ergebnis 8
+Gruppe B: orte -> Ergebnis 4
+Gruppe C: jahre -> Ergebnis 5
+Gruppe D: transaktionen -> Ergebnis 2
+Gruppe V: regeln -> Code 0764
+Segment E: reihenfolge -> finaler Code 0764
+
+Ratensperre:
+Drei falsche Ergebniseingaben innerhalb von fünf Minuten sperren die jeweilige Sitzung für zehn Minuten.
+
+Technischer Hinweis:
+Der Spielstand wird zentral in game-state.json gespeichert. Die Gruppenauswahl ist pro Browsersitzung bindend. Ein absichtliches Umgehen durch Inkognito-Modus oder ein anderes Gerät kann technisch nicht vollständig verhindert werden.
