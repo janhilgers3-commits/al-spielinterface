@@ -1,0 +1,9 @@
+const $=id=>document.getElementById(id);
+let status=null,timer=null;
+async function request(url,options={}){const response=await fetch(url,{headers:{'Content-Type':'application/json'},...options});const data=await response.json();if(!response.ok)throw new Error(data.error||'Fehler');return data}
+function message(text){$('controlMessage').textContent=text;$('controlMessage').classList.toggle('hidden',!text)}
+function render(){clearInterval(timer);if(!status?.running){$('statusBadge').textContent='BEREIT';$('controlTitle').textContent='Spieluhr ist angehalten';$('controlText').textContent='Alle Geräte können vorbereitet werden. Erst unmittelbar zum offiziellen Beginn starten.';$('controlClock').textContent='05:00:00';$('startButton').disabled=false;return}$('statusBadge').textContent='LÄUFT';$('controlTitle').textContent='Spieltag läuft';$('controlText').textContent=`Offizieller Start: ${new Date(status.startedAt).toLocaleTimeString('de-DE')}`;$('startButton').disabled=true;$('startButton').textContent='SPIELTAG GESTARTET';const offset=Date.now()-status.serverNow;const end=status.startedAt+(status.total||300*60000);function tick(){const left=Math.max(0,end-(Date.now()-offset));const seconds=Math.ceil(left/1000),hours=Math.floor(seconds/3600),minutes=Math.floor(seconds%3600/60),rest=seconds%60;$('controlClock').textContent=[hours,minutes,rest].map(n=>String(n).padStart(2,'0')).join(':')}tick();timer=setInterval(tick,1000)}
+async function refresh(){try{status=await request('/api/admin/status');render();message('')}catch(error){message(error.message)}}
+$('startButton').onclick=async()=>{if(!confirm('Spieltag jetzt verbindlich starten? Die fünfstündige Uhr beginnt sofort.'))return;$('startButton').disabled=true;try{status=await request('/api/admin/start',{method:'POST',body:'{}'});render()}catch(error){message(error.message);$('startButton').disabled=false}};
+$('participantLink').href=location.origin+'/';
+refresh();setInterval(refresh,5000);

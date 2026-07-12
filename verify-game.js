@@ -7,6 +7,8 @@ const required = [
   'game-data.json',
   'public/index.html',
   'public/app.js',
+  'public/leitung.html',
+  'public/leitung.js',
   'public/app.css',
   'public/themes/ermittlungsraum.css',
   'public/themes/kriminaltechnik.css',
@@ -58,6 +60,17 @@ if (exists('public/app.js')) {
   }
   if (!app.includes("activateTheme('hierarchyforce')")) {
     errors.push('Der automatische Designwechsel beim Hierarchy-Force-Eingriff fehlt.');
+  }
+  const hiddenSecrets = ['accessWords', 'personen', 'orte', 'jahre', 'transaktionen', 'regeln', 'reihenfolge', '0764', '6407', '64-07', 'BILDETGRUPPEN'];
+  for (const secret of hiddenSecrets) {
+    if (app.toLocaleLowerCase('de-DE').includes(secret.toLocaleLowerCase('de-DE'))) errors.push(`Öffentlicher Client enthält noch einen Klartextschlüssel oder -code: ${secret}`);
+  }
+}
+
+if (exists('game-server.js')) {
+  const server = fs.readFileSync(path.join(root, 'game-server.js'), 'utf8');
+  for (const route of ['/api/admin/start', '/api/recovery']) {
+    if (!server.includes(route)) errors.push(`Serverroute fehlt: ${route}`);
   }
 }
 

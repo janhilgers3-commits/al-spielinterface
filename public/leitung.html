@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>L&B Spielleitung</title>
+  <link rel="stylesheet" href="app.css?v=2160">
+</head>
+<body>
+  <header>
+    <div><p class="eyebrow">LOKALE STEUERUNG</p><h1>SPIELLEITUNG</h1><p>Diese Seite funktioniert ausschließlich auf dem Spielleitungsrechner.</p></div>
+    <span id="statusBadge" class="status-badge">PRÜFUNG</span>
+  </header>
+  <main>
+    <section class="puzzle-box control-panel">
+      <span class="section-label">EINSATZSTEUERUNG</span>
+      <h2 id="controlTitle">Status wird geladen …</h2>
+      <p id="controlText">Teilnehmerlinks dürfen bereits geöffnet werden. Die fünfstündige Spieluhr bleibt bis zum manuellen Start angehalten.</p>
+      <div class="control-status"><span>SPIELUHR</span><strong id="controlClock">BEREIT</strong></div>
+      <button id="startButton" type="button" disabled>SPIELTAG JETZT STARTEN</button>
+      <p id="controlMessage" class="message hidden"></p>
+    </section>
+    <section class="puzzle-box">
+      <span class="section-label">TEILNEHMERLINK</span>
+      <p>Geben Sie den Teilnehmenden ausschließlich die normale Serveradresse ohne <code>/leitung.html</code>.</p>
+      <a id="participantLink" class="button-link" href="/" target="_blank" rel="noopener">TEILNEHMERANSICHT ÖFFNEN</a>
+    </section>
+  </main>
+  <script src="leitung.js?v=2160"></script>
+</body>
+</html>
