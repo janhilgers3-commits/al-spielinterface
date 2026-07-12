@@ -35,7 +35,9 @@ for (const [group, count] of Object.entries(pageCounts)) {
 }
 
 try {
-  JSON.parse(fs.readFileSync(path.join(root, 'game-data.json'), 'utf8'));
+  const gameData = JSON.parse(fs.readFileSync(path.join(root, 'game-data.json'), 'utf8'));
+  if (gameData.groups.V.answer !== '0764') errors.push('Der Zwischencode von Segment V muss 0764 bleiben.');
+  if (gameData.groups.E.answer !== '6407') errors.push('Der finale Code von Segment E muss 64-07 bzw. intern 6407 lauten.');
 } catch (error) {
   errors.push(`game-data.json ist ungültig: ${error.message}`);
 }

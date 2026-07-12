@@ -18,7 +18,7 @@ Gruppe B: orte -> Ergebnis 4
 Gruppe C: jahre -> Ergebnis 5
 Gruppe D: transaktionen -> Ergebnis 2
 Gruppe V: regeln -> Code 0764
-Segment E: reihenfolge -> finaler Code 0764
+Segment E: reihenfolge -> finaler Code 64-07 (6407 wird ebenfalls akzeptiert)
 
 Ratensperre:
 Drei falsche Ergebniseingaben innerhalb von fünf Minuten sperren die jeweilige Sitzung für zehn Minuten.
