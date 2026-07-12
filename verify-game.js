@@ -8,6 +8,9 @@ const required = [
   'public/index.html',
   'public/app.js',
   'public/app.css',
+  'public/themes/ermittlungsraum.css',
+  'public/themes/kriminaltechnik.css',
+  'public/themes/hierarchyforce.css',
   'public/media/article-final-subtil-1.png',
   'public/media/article-final-subtil-2.png'
 ];
@@ -46,6 +49,9 @@ if (exists('public/app.js')) {
   if (!app.includes("id:'ARTIKEL',images:content.articleImages")) {
     errors.push('Der Artikel wird im Gruppenarchiv nicht eindeutig als Bild eingebunden.');
   }
+  if (!app.includes("activateTheme('hierarchyforce')")) {
+    errors.push('Der automatische Designwechsel beim Hierarchy-Force-Eingriff fehlt.');
+  }
 }
 
 if (errors.length) {
@@ -56,4 +62,3 @@ if (errors.length) {
 
 console.log('Integritätsprüfung erfolgreich.');
 console.log('Alle sechs Originalakten, 36 gerenderten Seiten und Artikelbilder sind vorhanden.');
-

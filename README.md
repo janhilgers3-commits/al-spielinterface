@@ -27,7 +27,14 @@ npm start
 
 Danach ist das Spiel unter <http://localhost:8764/> erreichbar. Unter Windows kann alternativ `start_game.cmd` verwendet werden.
 
+## Designvarianten
+
+Standardmäßig startet das Spiel im zurückhaltenden **Ermittlungsraum**-Design. Beim tatsächlichen Eingriff von Hierarchy Force wechselt die Oberfläche automatisch in das entsprechende Systemdesign. Für eine gezielte technische Vorschau stehen außerdem folgende lokale Adressen bereit:
+
+- Ermittlungsraum: <http://localhost:8764/?theme=ermittlungsraum>
+- Kriminaltechnik: <http://localhost:8764/?theme=kriminaltechnik>
+- Hierarchy Force: <http://localhost:8764/?theme=hierarchyforce>
+
 ## Nicht versionierte Dateien
 
 `game-state.json` enthält den veränderlichen Spielstand und wird bewusst ignoriert. Der Ordner `runtime` enthält nur die große, gebündelte Windows-Laufzeit für den Offline-Start und wird ebenfalls nicht in Git aufgenommen. Für Git und die automatische Prüfung genügt eine normale Node.js-Installation.
-
